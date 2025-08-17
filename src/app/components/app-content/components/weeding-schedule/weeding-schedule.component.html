@@ -1,0 +1,10 @@
+<div class="section-wrapper">
+  <h2 class="section-header">Harmonogram wesela</h2>
+  <div class="timeline">
+    <div class="timeline-item" *ngFor="let item of schedule; let i = index">
+      <div class="timeline-hour">{{ item.hour }}</div>
+      <div class="timeline-event">{{ item.event }}</div>
+      <div class="timeline-line" *ngIf="i < schedule.length - 1"></div>
+    </div>
+  </div>
+</div>

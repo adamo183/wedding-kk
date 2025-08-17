@@ -1,0 +1,27 @@
+<div class="section-wrapper">
+  <h2 class="section-header">Menu weselne</h2>
+  <div class="section-description">
+    <div *ngFor="let item of menu; let i = index" class="menu-block">
+      <h2 class="menu-event header">{{ item.event }}</h2>
+
+      <div *ngIf="item.subevents && item.subevents.length > 0; else noSubevents">
+        <div *ngFor="let subitem of item.subevents; let j = index" class="subevent">
+          <h4 class="subevent-title">{{ subitem.event }}</h4>
+          <ul class="menu-list">
+            <li *ngFor="let menuItem of subitem.menu; let k = index">
+              {{ menuItem }}
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <ng-template #noSubevents>
+        <ul class="menu-list">
+          <li *ngFor="let menuItem of item.menu; let m = index">
+            {{ menuItem }}
+          </li>
+        </ul>
+      </ng-template>
+    </div>
+  </div>
+</div>

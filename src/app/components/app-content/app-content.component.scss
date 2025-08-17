@@ -1,0 +1,33 @@
+.flex {
+    display: flex;
+    width: 100%;
+    align-items: center;
+}
+
+.flex-direction-col {
+    flex-direction: column;
+}
+
+.h100 {
+    height: 100vh;
+}
+
+.h50 {
+    height: 50vh;
+}
+
+.center-verticaly {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.content {
+  position: relative;
+  z-index: 10;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+}

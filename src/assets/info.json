@@ -1,0 +1,63 @@
+{
+    "schedule": [
+        {
+            "hour": "14:00",
+            "event": "Ślub"
+        },
+        {
+            "hour": "15:30",
+            "event": "Przyjazd na sale"
+        },
+        {
+            "hour": "17:00",
+            "event": "Obiad"
+        },
+        {
+            "hour": "20:00",
+            "event": "Kolacja I"
+        },
+        {
+            "hour": "22:00",
+            "event": "Kolacja II"
+        }
+    ],
+    "menu": [
+        {
+            "event": "Obiad",
+            "subevents": [
+                {
+                    "event": "Danie 1",
+                    "menu": ["Rosół drobiowo-wołowy podany z makaronem i warzywami."]
+                },
+                {
+                    "event": "Danie 2",
+                    "menu": ["De volaille z serem,", "Schabowy w podwójnej panierce","Pieczeń wołowa marynowana w czerwonym winie","Udko faszerowane warzywami","Roladki mięsne z pieczarkami w sosie grzybowym"]
+                },
+                {
+                    "event": "Dodatki",
+                    "menu": ["Frytki, Młode ziemniaki z koperkiem, Kluski śląskie", "Surówka pekińska z dodatkami, Mizeria,","Surówka z marchewki z brzoskwinią, Buraczki z chrzanem."]
+                }
+            ] 
+        },
+        {
+             "event": "Deser",
+             "menu": ["Lody wielosmakowe własnej produkcji z bitą śmietaną i owocami sezonowymi."]
+        },
+        {
+             "event": "Kolacja I",
+             "menu": ["Kieszonka drobiowa z suszonymi pomidorami otulona szynką parmeńską zanurzona w gorgonzoli podana z kluseczki szpinakowymi i bukietem sałat"]
+        },
+        {
+             "event": "Kolacja II",
+             "menu": ["Polędwiczki z rozmarynem w sosie z rydzów podane z opiekanymi ziemniakami i mieszanką warzyw śródziemnomorskich."]
+        },
+        {
+             "event": "KOLACJA III",
+             "menu": ["Boeuf Stroganow z bagietką paprykową."]
+        },
+        {
+             "event": "KOLACJA IV",
+             "menu": ["Barszcz czerwony z sakiewką półfrancuską."]
+        }
+    ]
+}

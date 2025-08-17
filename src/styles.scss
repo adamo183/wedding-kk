@@ -1,1 +1,202 @@
-/* You can add global styles to this file, and also import other style files */
+body {
+    margin: 0;
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+}
+  
+.section-wrapper {
+  max-width: 600px;
+  margin: 3rem auto;
+  text-align: center;
+   font-family: 'Playfair Display', serif;
+  color: #6b4c3b;
+  padding: 0 1rem;
+}
+
+.section-header {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #d4af37;
+  position: relative;
+  display: inline-block;
+  padding-bottom: 0.5rem;
+}
+
+.section-header::after {
+  content: '';
+  display: block;
+  width: 100%; 
+  height: 3px;
+  background-color: #c7ad87;
+  border-radius: 4px;
+  margin-top: 6px;
+  transform: none; 
+  opacity: 0.7;
+}
+
+.section-description {
+  font-size: 1.1rem;
+  line-height: 1.5;
+  margin-bottom: 2rem;
+  color: #6b4c3b;
+}
+
+.location-button {
+  background-color: #d9c9b6; 
+  color: #6b4c3b;
+  font-weight: 600;
+  padding: 0.6rem 1.8rem;
+  font-size: 1rem;
+  border-radius: 12px;
+  text-decoration: none;
+  box-shadow: 2px 2px 6px rgba(107, 76, 59, 0.3);
+  border: 2px solid #c7ad87;
+  transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+  min-width: 140px;
+  text-align: center;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+   font-family: 'Playfair Display', serif;
+  letter-spacing: 0.04em;
+  cursor: pointer;
+}
+
+.location-button:hover {
+  background-color: #c7ad87;
+  color: #3f2f20;
+  box-shadow: 4px 4px 12px rgba(63, 47, 32, 0.4);
+}
+
+
+.section-description {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 1rem; 
+
+  .header {
+    margin: 0.5rem !important;
+  }
+
+  > div {
+    padding: 0.5rem 1.2rem; 
+    border: 1px solid #e5dacd;
+    border-radius: 12px;
+    background: #faf8f5;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    transition: transform 0.2s;
+
+    &:hover {
+      transform: translateY(-3px);
+    }
+  }
+
+  ul {
+    list-style: none;
+    padding-left: 0.8rem;
+    margin: 0;
+
+    li {
+      position: relative;
+      padding: 0.3rem 0 0.3rem 1.2rem;
+      border-bottom: 1px dotted #d9c6b2;
+
+      &:last-child {
+        border-bottom: none;
+      }
+
+      &::before {
+        content: "🍃";
+        position: absolute;
+        left: 0;
+        color: #c9a27e;
+        font-size: 0.9rem;
+        line-height: 1;
+      }
+    }
+  }
+}
+
+.timeline {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  padding-left: 2rem;
+
+  .timeline-item {
+    position: relative;
+    margin-bottom: 2rem;
+    display: flex;
+    align-items: flex-start;
+
+    .timeline-hour {
+      font-weight: 700;
+      color: #8a5d3b;
+      font-size: 1.2rem;
+      margin-right: 1rem;
+      min-width: 60px;
+    }
+
+    .timeline-event {
+      background: #fff8f0;
+      border: 1px solid #e5dacd;
+      border-radius: 10px;
+      padding: 0.6rem 0.8rem;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+      color: #6d4c3d;
+      font-size: 1rem;
+      flex: 1;
+      word-break: break-word;
+    }
+
+    .timeline-line {
+      position: absolute;
+      left: 28px; 
+      top: 2rem;
+      width: 2px;
+      height: calc(100% - 1rem);
+      background: #e5dacd;
+    }
+
+    &::before {
+      position: absolute;
+      left: 20px;
+      top: 0;
+      color: #c9a27e;
+      font-size: 0.8rem;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .timeline {
+    padding-left: 0.5rem;
+
+    .timeline-item {
+      flex-direction: row;
+      align-items: center;
+      margin-bottom: 1.2rem;
+
+      .timeline-hour {
+        margin: 0 0.5rem 0 0;
+        min-width: auto;
+        font-size: 1rem;
+      }
+
+      .timeline-event {
+        padding: 0.5rem 0.7rem;
+        font-size: 0.95rem;
+        flex: 1;
+      }
+
+      &::before {
+        left: -5px;
+        top: 50%; 
+        transform: translateY(-50%);
+      }
+    }
+  }
+}

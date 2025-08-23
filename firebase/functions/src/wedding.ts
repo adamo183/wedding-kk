@@ -14,8 +14,6 @@ export const getWeddingData = functions
       if (req.method !== "GET") {
         return res.status(405).send("Method Not Allowed");
       }
-    const [buckets] = await storage.getBuckets();
-    console.log("Buckets:", buckets.map(b => b.name));
       const filePathInBucket = "data/info.json";
       const file = storage.bucket(bucketName).file(filePathInBucket);
 

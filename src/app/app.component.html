@@ -1,9 +1,15 @@
 <div class="wedding-wrapper">
-    <div class="content">
+  <div class="content">
+    <div class="side-border left">
+      <img *ngFor="let img of leftImages" [src]="img" alt="" title="" />
+    </div>
+    <div class="side-border right">
+      <img *ngFor="let img of rightImages" [src]="img"  alt="" title=""  />
+    </div>
     <app-header class="flex center"></app-header>
-      <div class="menu-wrapper">
-        <app-menu class="flex center" (menuClick)="scrollToView($event)"></app-menu>
-      </div>
+    <div class="menu-wrapper">
+      <app-menu class="flex center" (menuClick)="scrollToView($event)"></app-menu>
+    </div>
     <div class="content">
       <app-content #appContent class="flex"></app-content>
     </div>

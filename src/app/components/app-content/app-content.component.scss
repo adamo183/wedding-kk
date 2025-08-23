@@ -1,3 +1,13 @@
+@media (max-width: 768px) {
+  .display-mobile-content {
+    width: 60% !important;
+    margin: 0 auto;
+  }
+}
+
+.display-mobile-content{
+}
+
 .flex {
     display: flex;
     width: 100%;
@@ -30,4 +40,41 @@
   max-width: 1000px;
   margin: 0 auto;
   padding: 20px;
+}
+
+.wedding-section {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  position: relative;
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+.wedding-content {
+  flex: 1;
+  padding: 0 2rem;
+  position: relative;
+  z-index: 5;
+}
+
+.side-images {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  width: 120px;
+  flex-shrink: 0;
+  opacity: 0.9;
+}
+
+.side-images img {
+  max-width: 100px;
+  height: auto;
+  margin: 10px 0;
+  object-fit: contain;
+}
+
+.side-images.right {
+  transform: scaleX(-1);
 }

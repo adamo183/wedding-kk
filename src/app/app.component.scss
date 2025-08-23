@@ -5,9 +5,29 @@ app-header{
  margin-top: 30vh;
 }
 
+.side-border {
+  position: absolute;
+  top: 100vh;
+  bottom: 0;
+  width: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  z-index: 2;
+  opacity: 0.9;
+  pointer-events: none;
+  height: calc(100vh - 200px); 
+}
+
+
 @media (max-width: 768px) {
   app-header {
     margin-top: 25vh;
+  }
+
+  .side-border {
+    top: 50vh;
   }
 }
 
@@ -25,29 +45,14 @@ app-header{
   }
 
   .content {
-    padding: 50px;
     font-size: 1.2rem;
     min-height: 100vh;
   }
   
-
 .menu-wrapper {
   position: sticky;
   top: 0;
   z-index: 1000;
-}
-
-.wedding-wrapper {
-  position: relative;
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  overflow-x: hidden;
-
-  background-image: url('../assets/wed2.jpg');
-  background-size: contain;  
-  background-repeat: no-repeat;
-
 }
 
 .flowers {
@@ -72,7 +77,34 @@ app-header{
 .content {
   position: relative;
   z-index: 10;
-  max-width: 1000px;
   margin: 0 auto;
-  padding: 20px;
+  overflow-y: hidden;
+  width: 100%;
+}
+
+.wedding-wrapper {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  overflow-x: hidden;
+
+  background-image: url('../assets/wed2.jpg');
+  background-size: contain;  
+  background-repeat: no-repeat;
+}
+
+.side-border img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.side-border.left {
+  left: 0;
+}
+
+.side-border.right {
+  right: 0;
+  transform: scaleX(-1);
 }

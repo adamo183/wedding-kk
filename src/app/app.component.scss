@@ -1,17 +1,10 @@
 .container {
 }
 
-app-header{
+app-header {
   position: relative;
-  min-height: 80vh;
-  display: flex;
   width: 100%;
-  justify-content: center;
-  overflow-x: hidden;
-
-  background-image: url('../assets/wed2.jpg');
-  background-size: contain;  
-  background-repeat: no-repeat;
+  overflow: visible;
 }
 
 .side-border {
@@ -56,8 +49,6 @@ app-header{
   }
   
 .menu-wrapper {
-  // position: sticky;
-  // top: 0;
   z-index: 1000;
 }
 
@@ -84,7 +75,6 @@ app-header{
   position: relative;
   z-index: 10;
   margin: 0 auto;
-  // overflow-y: hidden;
   width: 100%;
 }
 

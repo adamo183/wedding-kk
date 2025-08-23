@@ -1,4 +1,4 @@
-import { Component, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, ViewChild } from '@angular/core';
 import { AppContentComponent } from './components/app-content/app-content.component';
 
 @Component({
@@ -6,29 +6,30 @@ import { AppContentComponent } from './components/app-content/app-content.compon
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent {
+export class AppComponent implements AfterViewInit {
   @ViewChild("appContent") appContent!: AppContentComponent
   public title = 'wedding-kk';
 
   public sideImages = [
-    'assets/edge_flowers.jpg',
-    'assets/edge_flowers_1.jpg',
-    'assets/edge_flowers_2.jpg'
+    'assets/edge_flowers.jpg'
+    // 'assets/edge_flowers_1.jpg',
+    // 'assets/edge_flowers_2.jpg'
   ];
 
   public repeatedImages: string[] = [];
-    public leftImages: string[] = [];
-      public rightImages: string[] = [];
+  public leftImages: string[] = [];
+  public rightImages: string[] = [];
 
   public scrollToView(event: string) {
     this.appContent.scrollToSection(event);
   }
 
   generateSideImages() {
-    const approxImageHeight = 400;
-    const repeatCount = Math.ceil(window.innerHeight / approxImageHeight);
+    const approxImageHeight = 600;
 
-    for (let i = 0; i < 3; i++) {
+    const repeatCount = Math.ceil(document.body.scrollHeight / approxImageHeight);
+
+    for (let i = 0; i < repeatCount; i++) {
       this.leftImages.push(...this.shuffle([...this.sideImages]));
       this.rightImages.push(...this.shuffle([...this.sideImages]));
     }
@@ -38,9 +39,14 @@ export class AppComponent {
   }
 
   constructor() {
-    this.generateSideImages();
+    
   }
 
+  ngAfterViewInit() {
+  setTimeout(() => {
+    this.generateSideImages();
+  });
+}
 
   public shuffle(array: string[]): string[] {
     for (let i = array.length - 1; i > 0; i--) {

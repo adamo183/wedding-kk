@@ -2,12 +2,20 @@
 }
 
 app-header{
- margin-top: 30vh;
+  position: relative;
+  min-height: 80vh;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  overflow-x: hidden;
+
+  background-image: url('../assets/wed2.jpg');
+  background-size: contain;  
+  background-repeat: no-repeat;
 }
 
 .side-border {
   position: absolute;
-  top: 100vh;
   bottom: 0;
   width: 150px;
   display: flex;
@@ -16,18 +24,16 @@ app-header{
   align-items: center;
   z-index: 2;
   opacity: 0.9;
+  top: 50vh;
   pointer-events: none;
-  height: calc(100vh - 200px); 
 }
-
 
 @media (max-width: 768px) {
   app-header {
-    margin-top: 25vh;
   }
 
   .side-border {
-    top: 50vh;
+    top:  -20vh;
   }
 }
 
@@ -50,8 +56,8 @@ app-header{
   }
   
 .menu-wrapper {
-  position: sticky;
-  top: 0;
+  // position: sticky;
+  // top: 0;
   z-index: 1000;
 }
 
@@ -78,20 +84,12 @@ app-header{
   position: relative;
   z-index: 10;
   margin: 0 auto;
-  overflow-y: hidden;
+  // overflow-y: hidden;
   width: 100%;
 }
 
 .wedding-wrapper {
-  position: relative;
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  overflow-x: hidden;
 
-  background-image: url('../assets/wed2.jpg');
-  background-size: contain;  
-  background-repeat: no-repeat;
 }
 
 .side-border img {

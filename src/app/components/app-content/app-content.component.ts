@@ -16,7 +16,6 @@ export class AppContentComponent implements OnInit, OnDestroy {
   ngOnInit() {
     this.dataSubs = this.dataService.loadData().subscribe(res => {
       this.weddingInfo = res;
-        console.log('Odczytano JSON:', this.weddingInfo);
     });
   }
 

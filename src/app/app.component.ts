@@ -25,13 +25,16 @@ export class AppComponent {
   }
 
   generateSideImages() {
-    const approxImageHeight = 100; // w px, wysokość pojedynczego obrazka
+    const approxImageHeight = 400;
     const repeatCount = Math.ceil(window.innerHeight / approxImageHeight);
 
-    for (let i = 0; i < repeatCount; i++) {
+    for (let i = 0; i < 3; i++) {
       this.leftImages.push(...this.shuffle([...this.sideImages]));
       this.rightImages.push(...this.shuffle([...this.sideImages]));
     }
+
+    this.leftImages = this.leftImages.slice(0, -4);
+    this.rightImages = this.rightImages.slice(0, -4);
   }
 
   constructor() {

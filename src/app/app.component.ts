@@ -25,7 +25,7 @@ export class AppComponent implements AfterViewInit {
   }
 
   generateSideImages() {
-    const approxImageHeight = 600;
+    const approxImageHeight = 700;
 
     const repeatCount = Math.ceil(document.body.scrollHeight / approxImageHeight);
 
@@ -33,9 +33,6 @@ export class AppComponent implements AfterViewInit {
       this.leftImages.push(...this.shuffle([...this.sideImages]));
       this.rightImages.push(...this.shuffle([...this.sideImages]));
     }
-
-    this.leftImages = this.leftImages.slice(0, -4);
-    this.rightImages = this.rightImages.slice(0, -4);
   }
 
   constructor() {

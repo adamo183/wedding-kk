@@ -11,9 +11,9 @@ export class AppComponent implements AfterViewInit {
   public title = 'wedding-kk';
 
   public sideImages = [
-    'assets/edge_flowers.jpg'
-    // 'assets/edge_flowers_1.jpg',
-    // 'assets/edge_flowers_2.jpg'
+    'assets/edge_flowers.jpg',
+    'assets/edge_flowers_1.jpg',
+    'assets/edge_flowers_2.jpg'
   ];
 
   public repeatedImages: string[] = [];
@@ -25,13 +25,13 @@ export class AppComponent implements AfterViewInit {
   }
 
   generateSideImages() {
-    const approxImageHeight = 700;
+    const approxImageHeight = 500;
 
     const repeatCount = Math.ceil(document.body.scrollHeight / approxImageHeight);
 
     for (let i = 0; i < repeatCount; i++) {
-      this.leftImages.push(...this.shuffle([...this.sideImages]));
-      this.rightImages.push(...this.shuffle([...this.sideImages]));
+      this.leftImages.push(this.shuffle([...this.sideImages])[0]);
+      this.rightImages.push(this.shuffle([...this.sideImages])[0]);
     }
   }
 

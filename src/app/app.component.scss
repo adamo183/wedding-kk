@@ -20,15 +20,6 @@ app-header {
   pointer-events: none;
 }
 
-@media (max-width: 768px) {
-  app-header {
-  }
-
-  .side-border {
-    top:  -20vh;
-  }
-}
-
 .flex {
     display: flex;
 }
@@ -96,6 +87,25 @@ app-header {
 .side-border.right {
   right: 0;
   transform: scaleX(-1);
+}
+
+@media (max-width: 768px) {
+  app-header {
+  }
+
+  .side-border {
+  }
+
+  .left {
+    left: 0;
+    top: -20vh;
+  }
+
+  .right {
+    right: 0;
+    top: 0vh;
+    transform: scaleX(-1);
+  }
 }
 
 

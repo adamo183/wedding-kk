@@ -14,6 +14,10 @@ import { WeedingScheduleComponent } from './components/app-content/components/we
 import { WeedingMenuComponent } from './components/app-content/components/weeding-menu/weeding-menu.component';
 import { WeedingDriveComponent } from './components/app-content/components/weeding-drive/weeding-drive.component';
 import { WeddingSleepComponent } from './components/app-content/components/wedding-sleep/wedding-sleep.component';
+import { provideFirebaseApp, initializeApp } from '@angular/fire/app';
+import { provideStorage, getStorage } from '@angular/fire/storage';
+import { firebaseConfig } from '../config/firebase.config';
+import { WeddingSwipperGalleryComponent } from './components/app-content/components/wedding-swipper-gallery/wedding-swipper-gallery.component';
 
 @NgModule({
   declarations: [
@@ -26,14 +30,19 @@ import { WeddingSleepComponent } from './components/app-content/components/weddi
     WeedingScheduleComponent,
     WeedingMenuComponent,
     WeedingDriveComponent,
-    WeddingSleepComponent
+    WeddingSleepComponent,
+    WeddingSwipperGalleryComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule 
+    HttpClientModule
   ],
-  providers: [DataService],
+  providers: [DataService,
+    provideFirebaseApp(() => initializeApp(firebaseConfig)),
+    provideStorage(() => getStorage())
+  ],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+ }

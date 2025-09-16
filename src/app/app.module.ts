@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { importProvidersFrom, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 
@@ -13,14 +13,13 @@ import { WeedingScheduleComponent } from './components/app-content/components/we
 import { WeedingMenuComponent } from './components/app-content/components/weeding-menu/weeding-menu.component';
 import { WeedingDriveComponent } from './components/app-content/components/weeding-drive/weeding-drive.component';
 import { WeddingSleepComponent } from './components/app-content/components/wedding-sleep/wedding-sleep.component';
-import { WeddingSwipperGalleryComponent } from './components/app-content/components/wedding-swipper-gallery/wedding-swipper-gallery.component';
-
+import { GalleryModule } from 'ng-gallery';
+import { LightboxModule } from 'ng-gallery/lightbox';
 import { AngularFireModule } from '@angular/fire/compat';
 import { AngularFireStorageModule } from '@angular/fire/compat/storage';
-
-import { firebaseConfig } from '../config/firebase.config';
+import { firebaseConfig } from './config/firebase.config';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { DataService } from 'src/services/dataService';
-import { GalleryModule } from 'ng-gallery';
 
 @NgModule({
   declarations: [
@@ -34,14 +33,16 @@ import { GalleryModule } from 'ng-gallery';
     WeedingMenuComponent,
     WeedingDriveComponent,
     WeddingSleepComponent,
-    WeddingSwipperGalleryComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
+    GalleryModule,
+    LightboxModule,
     AngularFireModule.initializeApp(firebaseConfig),
-    AngularFireStorageModule 
+    AngularFireStorageModule,
+    BrowserAnimationsModule
   ],
   providers: [DataService],
   bootstrap: [AppComponent]

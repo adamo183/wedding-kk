@@ -19,6 +19,7 @@ import { AngularFireModule } from '@angular/fire/compat';
 import { AngularFireStorageModule } from '@angular/fire/compat/storage';
 import { firebaseConfig } from './config/firebase.config';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { DataService } from 'src/services/dataService';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,6 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     WeedingMenuComponent,
     WeedingDriveComponent,
     WeddingSleepComponent,
-    WeddingSwipperGalleryComponent
   ],
   imports: [
     BrowserModule,

@@ -1,63 +1,105 @@
 {
-    "schedule": [
+  "schedule": [
+    {
+      "hour": "14:00",
+      "event": "Ślub"
+    },
+    {
+      "hour": "16:00",
+      "event": "Uroczysty obiad"
+    },
+    {
+      "hour": "16:30",
+      "event": "Czas na życzenia"
+    },
+    {
+      "hour": "17:00",
+      "event": "Wspólne zdjęcia"
+    },
+    {
+      "hour": "17:45",
+      "event": "Pierwszy taniec"
+    },
+    {
+      "hour": "18:30",
+      "event": "Tort"
+    },
+    {
+      "hour": "20:00",
+      "event": "Ciepły bufet w formie bemarów"
+    },
+    {
+      "hour": "20:30",
+      "event": "Fotobudka"
+    },
+     {
+      "hour": "21:00",
+      "event": "Kolacja I"
+    },
+    {
+      "hour": "23:00",
+      "event": "Kolacja II"
+    },
+    {
+      "hour": "01:00",
+      "event": "Kolacja III"
+    },
+    {
+      "hour": "02:00",
+      "event": "Kolacja IV"
+    }
+  ],
+  "menu": [
+    {
+      "event": "Uroczysty obiad",
+      "subevents": [
         {
-            "hour": "14:00",
-            "event": "Ślub!!!"
+          "event": "Zupa",
+          "menu": [
+            "Tradycyjny rosół z makaronem"
+          ]
         },
         {
-            "hour": "15:30",
-            "event": "Przyjazd na sale!!!"
+          "event": "Danie Główne",
+          "menu": [
+            "Karkówka á la dziczyzna",
+            "Rolady śląskie",
+            "Marynowane piersi i udka z kaczki",
+            "Panierowany filet z kurczaka",
+            "Kotlet de volaille"
+          ]
         },
         {
-            "hour": "17:00",
-            "event": "Obiad!!!"
-        },
-        {
-            "hour": "20:00",
-            "event": "Kolacja I"
-        },
-        {
-            "hour": "22:00",
-            "event": "Kolacja II"
+          "event": "Dodatki",
+          "menu": [
+            "kluski śląskie, ziemniaki, modra kapusta, kapusta zasmażana, buraczki, surówka wiosenna"
+          ]
         }
-    ],
-    "menu": [
-        {
-            "event": "Obiad",
-            "subevents": [
-                {
-                    "event": "Danie 1",
-                    "menu": ["Rosół drobiowo-wołowy podany z makaronem i warzywami."]
-                },
-                {
-                    "event": "Danie 2",
-                    "menu": ["De volaille z serem,", "Schabowy w podwójnej panierce","Pieczeń wołowa marynowana w czerwonym winie","Udko faszerowane warzywami","Roladki mięsne z pieczarkami w sosie grzybowym"]
-                },
-                {
-                    "event": "Dodatki",
-                    "menu": ["Frytki, Młode ziemniaki z koperkiem, Kluski śląskie", "Surówka pekińska z dodatkami, Mizeria,","Surówka z marchewki z brzoskwinią, Buraczki z chrzanem."]
-                }
-            ] 
-        },
-        {
-             "event": "Deser",
-             "menu": ["Lody wielosmakowe własnej produkcji z bitą śmietaną i owocami sezonowymi."]
-        },
-        {
-             "event": "Kolacja I",
-             "menu": ["Kieszonka drobiowa z suszonymi pomidorami otulona szynką parmeńską zanurzona w gorgonzoli podana z kluseczki szpinakowymi i bukietem sałat"]
-        },
-        {
-             "event": "Kolacja II",
-             "menu": ["Polędwiczki z rozmarynem w sosie z rydzów podane z opiekanymi ziemniakami i mieszanką warzyw śródziemnomorskich."]
-        },
-        {
-             "event": "KOLACJA III",
-             "menu": ["Boeuf Stroganow z bagietką paprykową."]
-        },
-        {
-             "event": "KOLACJA IV",
-             "menu": ["Barszcz czerwony z sakiewką półfrancuską."]
-        }
-    ]
+      ]
+    },
+    {
+      "event": "Kolacja I",
+      "menu": [
+        "Udziec peklowany w ziołach z chrupiącymi ziemniaczkami i kapustą z grzybami"
+      ]
+    },
+    {
+      "event": "Kolacja II",
+      "menu": [
+        "Filet z kurczaka w szynce parmeńskiej z frytkami i sałatką"
+      ]
+    },
+    {
+      "event": "KOLACJA III",
+      "menu": [
+        "Barszczyk z pasztecikami w cieście francuskim i krokietem"
+      ]
+    },
+    {
+      "event": "KOLACJA IV",
+      "menu": [
+        "Strogonow"
+      ]
+    }
+  ]
 }

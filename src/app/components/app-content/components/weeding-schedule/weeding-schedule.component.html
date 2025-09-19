@@ -1,5 +1,9 @@
 <div class="section-wrapper">
   <h2 class="section-header">Harmonogram wesela</h2>
+    <p class="section-description">
+  PS. Harmonogram jest tylko wskazówką, a podane godziny mogą się delikatnie
+  przesunąć gdy impreza zacznie żyć własnym rytmem.
+    </p>
   <div class="timeline">
     <div class="timeline-item" *ngFor="let item of schedule; let i = index">
       <div class="timeline-hour">{{ item.hour }}</div>
@@ -7,4 +11,7 @@
       <div class="timeline-line" *ngIf="i < schedule.length - 1"></div>
     </div>
   </div>
+  <p class="section-description">
+  … a dalej już tylko zabawa do białego rana!
+  </p>
 </div>

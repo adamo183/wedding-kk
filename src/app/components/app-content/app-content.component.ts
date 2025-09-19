@@ -1,3 +1,4 @@
+import { CommonModule } from '@angular/common';
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Subscribable, Subscription } from 'rxjs';
 import { WeddingData } from 'src/models/weddingData';

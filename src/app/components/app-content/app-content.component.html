@@ -1,8 +1,8 @@
         <div class="flex flex-direction-col display-mobile-content">
             <app-wedding-gallery class="center-verticaly " id="gallery"></app-wedding-gallery>
-            <app-weeding-schedule [schedule]="weddingInfo.schedule" class="center-verticaly " id="schedule"></app-weeding-schedule>
-            <app-weeding-menu [menu]="weddingInfo.menu"  class="center-verticaly " id="menu"></app-weeding-menu>
-            <app-wedding-info class="center-verticaly " id="info"></app-wedding-info>
+            <app-weeding-schedule *ngIf="weddingInfo" [schedule]="weddingInfo.schedule" class="center-verticaly " id="schedule"></app-weeding-schedule>
+            <app-weeding-menu *ngIf="weddingInfo"  [menu]="weddingInfo.menu"  class="center-verticaly " id="menu"></app-weeding-menu>
+            <!-- <app-wedding-info class="center-verticaly " id="info"></app-wedding-info> -->
             <app-wedding-sleep class="center-verticaly " id="weddingSleep"></app-wedding-sleep>
             <app-weeding-drive class="center-verticaly " id="weddingBus"></app-weeding-drive>
         </div>

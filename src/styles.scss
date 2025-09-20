@@ -14,7 +14,7 @@ body {
   max-width: 600px;
   margin: 3rem auto;
   text-align: center;
-   font-family: 'Playfair Display', serif;
+  font-family: 'Playfair Display', serif;
   color: #6b4c3b;
 }
 
@@ -172,6 +172,10 @@ body {
 }
 
 @media (max-width: 600px) {
+  .section-wrapper {
+    margin: 0rem auto;
+  }
+
   .timeline {
     padding-left: 0.5rem;
 

@@ -3,10 +3,10 @@
     <app-header class="flex center"></app-header>
     <div class="content">
       <div class="side-border left">
-        <img *ngFor="let img of leftImages" [src]="img" alt="" title="" />
+        <img *ngFor="let src of leftImages" [src]="src.img" [ngStyle]="{'margin-top.px': src.marginRandom}"  alt="" title="" />
       </div>
       <div class="side-border right">
-        <img *ngFor="let img of rightImages" [src]="img"  alt="" title=""  />
+        <img *ngFor="let src of rightImages" [src]="src.img" [ngStyle]="{'margin-top.px': src.marginRandom}"  alt="" title=""  />
       </div>
       <div class="menu-wrapper">
         <app-menu class="flex center" (menuClick)="scrollToView($event)"></app-menu>

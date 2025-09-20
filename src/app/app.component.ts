@@ -16,27 +16,29 @@ export class AppComponent implements AfterViewInit {
     'assets/edge_flowers_2.jpg'
   ];
 
-  public repeatedImages: string[] = [];
-  public leftImages: string[] = [];
-  public rightImages: string[] = [];
+  public leftImages: any[] = [];
+  public rightImages: any[] = [];
 
   public scrollToView(event: string) {
     this.appContent.scrollToSection(event);
   }
 
   generateSideImages() {
-    const approxImageHeight = 500;
+    const approxImageHeight = 400;
 
     const repeatCount = Math.ceil(document.body.scrollHeight / approxImageHeight);
 
     for (let i = 0; i < repeatCount; i++) {
-      this.leftImages.push(this.shuffle([...this.sideImages])[0]);
-      this.rightImages.push(this.shuffle([...this.sideImages])[0]);
+      this.leftImages.push({ img: this.shuffle([...this.sideImages])[0], marginRandom: this.getRandomMargin(50, 150)});
+      this.rightImages.push({ img: this.shuffle([...this.sideImages])[0], marginRandom: this.getRandomMargin(50, 150)});
     }
   }
 
   constructor() {
-    
+  }
+
+    private getRandomMargin(min: number, max: number): number {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
   }
 
   ngAfterViewInit() {

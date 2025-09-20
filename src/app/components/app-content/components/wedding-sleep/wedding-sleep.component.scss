@@ -23,12 +23,12 @@
 
 @media (max-width: 768px) {
   .tiles-grid {
-    grid-template-columns: repeat(2, 1fr); /* na telefonie 2 kolumny */
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
 @media (max-width: 480px) {
   .tiles-grid {
-    grid-template-columns: 1fr; /* bardzo małe ekrany -> 1 kolumna */
+    grid-template-columns: 1fr;
   }
 }

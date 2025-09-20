@@ -1,0 +1,34 @@
+
+.tiles-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* domyślnie 3 kolumny */
+  gap: 1rem;
+  margin: 2rem 0;
+}
+
+.tile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 1rem;
+  text-align: center;
+
+  text-decoration: none;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+
+@media (max-width: 768px) {
+  .tiles-grid {
+    grid-template-columns: repeat(2, 1fr); /* na telefonie 2 kolumny */
+  }
+}
+
+@media (max-width: 480px) {
+  .tiles-grid {
+    grid-template-columns: 1fr; /* bardzo małe ekrany -> 1 kolumna */
+  }
+}

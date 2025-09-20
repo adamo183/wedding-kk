@@ -7,7 +7,7 @@ import { WeddingData } from "src/models/weddingData";
 export class DataService {
   constructor(private http: HttpClient) {}
   private endpointUrl = 'https://getweddingdata-5pdxbmxr2q-uc.a.run.app';
-  private localFile = 'data/info.json';
+  private localFile = 'assets/info.json';
 
   loadData(): Observable<WeddingData> {
     return this.http.get<WeddingData>(this.endpointUrl).pipe(

@@ -6,6 +6,8 @@ body {
     font-style: normal;
     width: 100%;
     max-width: 100%;
+    padding: 0;
+    overflow-x: hidden;
 }
   
 .section-wrapper {
@@ -14,7 +16,6 @@ body {
   text-align: center;
    font-family: 'Playfair Display', serif;
   color: #6b4c3b;
-  padding: 0 1rem;
 }
 
 .section-header {

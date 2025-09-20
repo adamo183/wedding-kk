@@ -12,6 +12,7 @@ import { AngularFireStorage } from '@angular/fire/compat/storage';
 export class WeddingGalleryComponent implements OnInit {
   items: ImageItem[] = [];
   filelist: any[] = [];
+  galleryLink = 'https://photos.app.goo.gl/eQYDBzdEruxq2aqe8';
 
   constructor(public gallery: Gallery, public lightbox: Lightbox, private storage: AngularFireStorage) {}
 
@@ -19,22 +20,19 @@ export class WeddingGalleryComponent implements OnInit {
      this.loadImages();
   }
 
-  galleryLink = 'https://photos.app.goo.gl/eQYDBzdEruxq2aqe8';
-
-private loadImages() {
+  private loadImages() {
     const folderRef = this.storage.ref('photo');
-
+  
     folderRef.listAll().subscribe((res) => {
-      const downloads = res.items.map(itemRef =>
-        this.storage.ref(itemRef.fullPath).getDownloadURL().toPromise()
-      );
-      Promise.all(downloads).then(urls => {
-        this.items = this.items = urls.map(url => new ImageItem({
-          src: url,
-          thumb: url,
-        }));
+      res.items.forEach(itemRef => {
+        this.storage.ref(itemRef.fullPath).getDownloadURL().subscribe(url => {
+          this.items = [
+            ...this.items,
+            new ImageItem({ src: url, thumb: url })
+          ];
+        });
       });
     });
   }
 }
-
+  
